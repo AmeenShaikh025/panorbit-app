@@ -13,9 +13,15 @@ class Users extends Component {
   render() {
     const allUsers = this.props.data.auth.users;
     return (
-      <div>
-        <p>Users</p>
-        <User users={allUsers} />
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 mb-2">
+            <h2>LOGIN</h2>
+          </div>
+          <div className="col-md-12">
+            <User users={allUsers} />
+          </div>
+        </div>
       </div>
     );
   }

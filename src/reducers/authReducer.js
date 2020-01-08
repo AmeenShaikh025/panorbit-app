@@ -3,8 +3,7 @@ const initialState = {
   isFetchning: false,
   users: [],
   posts: [],
-  comments: [],
-  currentUserId: null
+  comments: []
 };
 
 const authReducer = (state = initialState, action) => {
@@ -19,7 +18,8 @@ const authReducer = (state = initialState, action) => {
         ...state,
         isFetchning: false,
         users: action.data,
-        posts: []
+        posts: [],
+        comments: []
       };
     case "FETCH_POST":
       return {
@@ -29,8 +29,18 @@ const authReducer = (state = initialState, action) => {
     case "FETCHED_POST":
       return {
         ...state,
-        posts: action.data,
-        users: []
+        posts: action.data
+      };
+    case "FETCH_COMMENTS":
+      return {
+        ...state,
+        isFetchning: true
+      };
+    case "FETCHED_COMMENTS":
+      return {
+        ...state,
+        isFetchning: false,
+        comments: action.data
       };
     default:
       return state;

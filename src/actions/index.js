@@ -44,7 +44,7 @@ export const fetch_comments = () => {
 export const fetched_comments = comments => {
   return {
     type: FETCHED_COMMENTS,
-    posts: comments
+    data: comments
   };
 };
 
@@ -78,7 +78,7 @@ export const allComments = () => {
   return dispatch => {
     fetch("https://panorbit.in/api/comments.json")
       .then(res => res.json())
-      .then(res => console.log(res))
+      .then(res => dispatch(fetched_comments(res.comments)))
       .catch(error => console.error(error));
   };
 };
