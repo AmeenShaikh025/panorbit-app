@@ -122,6 +122,7 @@ class Posts extends Component {
                   height="35"
                   width="35"
                   style={{ objectFit: "cover" }}
+                  onClick={this.props.history.goBack}
                 />
               </li>
             </ul>
