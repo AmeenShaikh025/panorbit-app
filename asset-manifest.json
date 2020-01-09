@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/panorbit-app/static/css/main.d1b05096.chunk.css",
+    "main.js": "/panorbit-app/static/js/main.96670eab.chunk.js",
+    "main.js.map": "/panorbit-app/static/js/main.96670eab.chunk.js.map",
+    "runtime-main.js": "/panorbit-app/static/js/runtime-main.9d937aca.js",
+    "runtime-main.js.map": "/panorbit-app/static/js/runtime-main.9d937aca.js.map",
+    "static/js/2.c6819614.chunk.js": "/panorbit-app/static/js/2.c6819614.chunk.js",
+    "static/js/2.c6819614.chunk.js.map": "/panorbit-app/static/js/2.c6819614.chunk.js.map",
+    "index.html": "/panorbit-app/index.html",
+    "precache-manifest.31551305ee59810da79131ef344cbaa6.js": "/panorbit-app/precache-manifest.31551305ee59810da79131ef344cbaa6.js",
+    "service-worker.js": "/panorbit-app/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/panorbit-app/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.c6819614.chunk.js.LICENSE": "/panorbit-app/static/js/2.c6819614.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d937aca.js",
+    "static/js/2.c6819614.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.96670eab.chunk.js"
+  ]
+}
