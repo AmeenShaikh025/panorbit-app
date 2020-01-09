@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { allPosts, allComments } from "../actions/index";
+import { allPosts } from "../actions/index";
 
 import Commentcount from "./Commentcount";
 
@@ -19,10 +19,8 @@ class Posts extends Component {
   render() {
     const currentId = Number(this.props.match.params.post_id);
     const postsList = this.props.data.auth.posts;
-    const commentList = this.props.data.auth.comments;
     const users = this.props.data.auth.users;
     const getCurrentUser = users.filter(user => Number(user.id) === currentId);
-
     const selectedPosts = postsList.filter(
       post => Number(post.userId) === currentId
     );
@@ -42,8 +40,6 @@ class Posts extends Component {
               className="img-fluid z-depth-1 rounded"
               style={{ objectFit: "cover", height: "60vh" }}
             />
-            {/* <p>id: {post.id}</p> */}
-            {/* <p>user id {post.userId}</p> */}
           </div>
           <div className="col-6 text-left" style={{ alignSelf: "center" }}>
             <img
@@ -53,7 +49,10 @@ class Posts extends Component {
               className="mr-2"
               alt="like"
             />
-            <Link to={"/post/" + post.id} className=" grey-text">
+            <Link
+              to={"/" + getCurrentUser[0].id + "/" + post.id}
+              className=" grey-text"
+            >
               <img
                 src={comment}
                 height="25"
@@ -65,7 +64,10 @@ class Posts extends Component {
             </Link>
           </div>
           <div className="col-6 text-right" style={{ alignSelf: "center" }}>
-            <Link to={"/post/" + post.id} className=" grey-text">
+            <Link
+              to={"/" + getCurrentUser[0].id + "/" + post.id}
+              className=" grey-text"
+            >
               Add Comment
             </Link>
             <img
@@ -80,10 +82,6 @@ class Posts extends Component {
         </div>
       );
     });
-
-    //commentList.filter( comment=> comment.postId === post.id)
-
-    //console.log(this.props.data.auth.comments);
 
     return (
       <div>

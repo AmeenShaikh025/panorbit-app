@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 class User extends Component {
   render() {
-    //console.log(this.props.users);
     const userList = this.props.users.map(user => {
       return (
         <Link to={"/" + user.id} key={user.id}>
@@ -14,7 +13,6 @@ class User extends Component {
             className="img-thumbnail rounded"
             width="200"
           ></img>
-          {/* <p className="white-text">{user.name}</p> */}
         </Link>
       );
     });
