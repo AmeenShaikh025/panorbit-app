@@ -15,7 +15,11 @@ class Commentcount extends Component {
       comment => comment.postId !== postId
     );
     const count = commentList.length;
-    return <div>{count} Comments</div>;
+    return (
+      <span>
+        {count} <span className="d-none d-sm-inline">Comments</span>
+      </span>
+    );
   }
 }
 const mapStateToProps = state => {
